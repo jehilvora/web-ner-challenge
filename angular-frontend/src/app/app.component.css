@@ -1,0 +1,21 @@
+.row {
+  display: flex;
+  height: 100%;
+}
+
+.column {
+  flex: 50%;
+}
+
+.fill {
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+}
+
+.left-margin {
+    margin-left: 15px;
+}
+
+/* .overflow {
+  overflow-y: scroll;
+} */
