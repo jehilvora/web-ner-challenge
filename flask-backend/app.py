@@ -1,12 +1,14 @@
 from flask import Flask, request, make_response, json
 from flask_cors import CORS
 import spacy
+from os import environ
 from model.EntitiesResponse import EntitiesResponse
 
 app = Flask(__name__)
 ors = CORS(app)
 app.config["CORS_HEADERS"] = "Content-Type"
-nlp = spacy.load("en_core_web_lg")
+model = environ.get("NER_MODEL") or "en_core_web_lg"
+nlp = spacy.load(model)
 
 @app.route("/", methods=['POST'])
 def ner():
