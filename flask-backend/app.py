@@ -1,5 +1,4 @@
-from email.policy import default
-from flask import Flask, request, make_response, jsonify, json
+from flask import Flask, request, make_response, json
 from flask_cors import CORS
 import spacy
 from model.EntitiesResponse import EntitiesResponse
